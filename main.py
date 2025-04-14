@@ -42,9 +42,11 @@ while cap.isOpened():
         break
 
 cap.release()
+# lol
 cv2.waitKey(1)
 cv2.destroyAllWindows()
 cv2.waitKey(1)
 print(last_f.shape)
 plt.imshow(last_f)
 plt.show()
+print("lol")
