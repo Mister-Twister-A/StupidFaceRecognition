@@ -32,11 +32,12 @@ while cap.isOpened():
     ret, f = cap.read()
     last_f = f[200:200+250, 200:200+250, :]
     cv2.imshow("lol", last_f)
+    if cv2.waitKey(1) & 0XFF == ord('p'):
+        i_path = os.path.join(Path_pos, f"{uuid.uuid1()}.jpg")
     if cv2.waitKey(1) & 0XFF == ord('a'):
         i_path = os.path.join(Path_anc, f"{uuid.uuid1()}.jpg")
         cv2.imwrite(i_path, last_f)
-    if cv2.waitKey(1) & 0XFF == ord('p'):
-        i_path = os.path.join(Path_pos, f"{uuid.uuid1()}.jpg")
+    
         cv2.imwrite(i_path, last_f)
     if cv2.waitKey(1) & 0XFF == ord('q'):
         break
@@ -50,3 +51,6 @@ print(last_f.shape)
 plt.imshow(last_f)
 plt.show()
 print("lol")
+
+
+
