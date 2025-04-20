@@ -61,9 +61,6 @@ if __name__ == "__main__":
     DataLoader = DataLoader(dataset, 12)
     for i,b in enumerate(DataLoader):
         a,c,t = b
-        print(i)
-        print(a.shape)
-        print(c.shape)
         print(t)
     
 
